@@ -1,0 +1,405 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  cursor: pointer;
+}
+
+/* COLORS */
+:root {
+  --background-color: #f1f1f1;
+  --background-light: #dde3fd;
+  --royal-blue: #4967e6;
+  --royal-blue-dark: #394fb3;
+  --complementary-color: #e6be49;
+  --complementary-color-dark: #997712;
+}
+
+/* BODY */
+body {
+  background: var(--background-color);
+  font-family: "Nunito", Helvetica, sans-serif;
+}
+
+/* HELPER STYLES */
+.highlight {
+  color: var(--royal-blue);
+}
+
+/* BUTTONS */
+.button-primary {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* HEADER */
+header {
+  background: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  width: 100%;
+  color: white;
+  padding: 0 1rem;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav a {
+  padding: 1.4rem 1.4rem;
+  height: 100%;
+}
+
+nav a:hover {
+  text-decoration: none;
+  background: var(--royal-blue-dark);
+}
+
+/* CONTAINER */
+
+/* BANNER */
+.hero-banner {
+  width: 100%;
+  min-height: 40rem;
+  background-image: url("./assets/images/home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.create-guide {
+  max-width: 500px;
+  min-height: 350px;
+  background: var(--complementary-color);
+  border-radius: 5px;
+  box-shadow: 0 0 4px black;
+  margin-left: 5rem;
+  animation: fade-in-left 0.8s;
+}
+
+@keyframes fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.create-title {
+  background: var(--complementary-color-dark);
+  border-radius: 5px 5px 0 0;
+}
+
+.create-title h2 {
+  text-align: center;
+  letter-spacing: 1.25px;
+  padding: 0.75rem;
+  border-bottom: 1px solid black;
+}
+
+.create-content {
+  width: 80%;
+  height: 250px;
+  margin: 1rem auto 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.create-content p {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.create-content p::after {
+  content: "";
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.create-content button {
+  background: #e54951;
+  margin: 1rem auto;
+  transition: ease-in 0.2s;
+}
+
+.create-content button:hover {
+  color: white;
+  background: #5c2427;
+}
+
+/* Mission */
+#mission {
+  min-height: 300px;
+  padding: 2rem 0;
+}
+
+#mission div {
+  width: 60%;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+}
+
+#mission div h2 {
+  font-size: 2.5rem;
+}
+
+#mission div p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+/* PORTFOLIO */
+#portfolio {
+  width: 100%;
+  min-height: 600px;
+  background: var(--background-light);
+  padding: 1rem;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+#portfolio .portfolio-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-width: 300px;
+  min-height: 500px;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  border: 2px solid var(--background-light);
+}
+
+.card img {
+  height: 350px;
+}
+
+.card .description {
+  text-align: center;
+  font-size: 1.5rem;
+  background: var(--royal-blue);
+  opacity: 0.8;
+  padding: 0.5rem;
+  color: white;
+  width: 100%;
+}
+
+#pig {
+  background-image: url("./assets/images/brandinc.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+#walker {
+  background-image: url("./assets/images/focus.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+#lego {
+  background-image: url("./assets/images/webdev.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+#portfolio button {
+  display: block;
+  margin: 1rem auto 0 auto;
+  background: var(--complementary-color);
+  color: black;
+  transition: ease-in 0.2s;
+}
+
+#portfolio button:hover {
+  background: var(--complementary-color-dark);
+  color: white;
+}
+
+/* INTERLUDE */
+.interlude {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interlude div {
+  border: 1px solid black;
+  width: 20%;
+}
+
+/* TEAM */
+#team {
+  min-height: 600px;
+  padding: 1rem;
+  background-image: url("./assets/images/team/teamback.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+#team .team-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#team .card img {
+  height: 350px;
+}
+
+#team h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+#team .card .description {
+  text-align: center;
+  background: var(--royal-blue);
+  border-radius: 4px;
+  opacity: 0.8;
+  width: 100%;
+}
+
+#phi {
+  background-image: url("./assets/images/team/phi.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#dick {
+  background-image: url("./assets/images/team/dick.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#shun {
+  background-image: url("./assets/images/team/shun.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* CONTACT */
+#contact {
+  padding: 1rem;
+  min-height: 200px;
+  text-align: center;
+}
+
+#contact > div {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+#contact .map {
+  margin-top: 1rem;
+  box-shadow: 0 0 4px black;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+}
+
+#contact p {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  color: white;
+  background: var(--royal-blue);
+  padding: 0.5rem;
+}
+
+/* MEDIA */
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: inline-block;
+    margin: auto;
+  }
+
+  .menu-mobile span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-top: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .create-guide {
+    margin: 0 auto;
+  }
+  .create-content p {
+    padding: 0.5rem 0;
+  }
+}
